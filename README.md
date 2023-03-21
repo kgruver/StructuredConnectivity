@@ -7,6 +7,6 @@ This repository serves to store the data and code for the Gruver et al. 2023 Bio
 
 Datasets are located within the "Datasets" directory.
 
-Custom code used to perform various statistical analyses are located within the "Data analysis" directory.
+Custom code used to perform various statistical analyses are located within the "Data analysis code" directory.
 
 Code used to produce visualization models of cerebellar nuclear neurons within the cerebellar fastigial nucleus, using the Brainrender package, are located within the "Brainrender 3D visualization" directory.
