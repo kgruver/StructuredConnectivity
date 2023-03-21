@@ -1,5 +1,7 @@
 # StructuredConnectivity
-Data and code for manuscript "Structured connectivity in the output of the cerebellar cortex" 
+Data and code for manuscript "Structured connectivity in the output of the cerebellar cortex." 
+Link: https://www.biorxiv.org/content/10.1101/2023.03.17.533173v2
+
 
 This repository serves to store the data and code for the Gruver et al. 2023 BioRxiv manuscript "Structured connectivity in the output of the cerebellar cortex." 
 
