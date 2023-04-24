@@ -10,7 +10,7 @@ from brainrender import _utils
 #Find cell coordinates
 import csv as c
 
-file = open("CNneuroncoordinatesthrough_allcells.csv")
+file = open("CN_neuron_coordinates_allcells.csv")
 csvreader = c.reader(file)
 
 # Skip first line to get to get to data
