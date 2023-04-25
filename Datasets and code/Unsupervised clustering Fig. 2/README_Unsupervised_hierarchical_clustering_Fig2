@@ -1,10 +1,7 @@
-
 Analysis performed using Jupyter Notebook environment (version 6.4.5) in a Python 3 ipykernel. 
 
 Boolean connectivity patterns of 40 cells (excludes "None"-zone cells where connection to a lobule was not found, and 1 1-zone cell that received input exclusively from lobule II) to lobules III through X, provided in .csv file. 
-
 Code for performing unsupervised hierarchical clustering using the Seaborn package and "clustergram" functionality. 
-
 Columns (lobules) are clustered (col_cluster=True) while rows (cells) are not (row_cluster=False). 
 
 Run time in Jupyter notebook takes a few seconds. 
