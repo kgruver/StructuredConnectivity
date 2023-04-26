@@ -12,6 +12,7 @@ These "axis1", "axis2", and "axis" correspond to the 2-dimensional axes along wh
 An example of how to call this function would go as follows:
 
 Linear_regression_bootstrap_coordinates("x","y","xy", "n4","50000")
+
 The function returns the number of randomly selected samples in which the Pearson's r2 value from the randomly selected datapoints is ≥ the r2 value of the line of best fit from the actual data for that group (e.g. the "n4" four-zone cells r2 = 0.997). 
 The function then returns the probability for how likely this is to occur given the number of nShuffles (e.g. number of samples in which the Pearson's r2 value from the randomly selected datapoints is ≥ the actual r2 value, divided by the value of nShuffles). 
 Lastly, the function returns a .csv file documenting the r2 value, slope, y-intercept, and P value of the linear regression for each sample in nShuffles. 
