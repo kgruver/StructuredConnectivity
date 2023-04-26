@@ -19,7 +19,6 @@ Lastly, the function returns a .csv file documenting the r2 value, slope, y-inte
 
 Depending on the size of nShuffles, the run time may last several minutes. A smaller nShuffles value results in a faster computation and shorter run time. 
 
-
 Instructions: 
 1. Install Python 3 and necessary files to run a Jupyter notebook environment. 
 2. Download .csv file and the python file including the function necessary to replicate the analysis performed in Fig. 4.
