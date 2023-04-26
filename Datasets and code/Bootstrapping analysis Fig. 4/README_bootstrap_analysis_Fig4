@@ -9,7 +9,6 @@ These "axis1", "axis2", and "axis" correspond to the 2-dimensional axes along wh
 "nShuffles" refers to how many times you wish to randomly sample x cells (related to "nZones" variable). We chose 50,000 iterations, but you can play with the number. 
 
 
-
 An example of how to call this function would go as follows:
 
 Linear_regression_bootstrap_coordinates("x","y","xy", "n4","50000")
