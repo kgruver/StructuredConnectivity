@@ -1,0 +1,39 @@
+
+Analysis performed using Jupyter Notebook environment (version 6.4.5) in a Python 3 ipykernel. 
+
+Coordinates of 10 sample cells and their corresponding number of identified connected zones is available in the "3d_coordinates_10cell_demo" file. 
+
+Code for performing X number of bootstrap sampling repetitions is provided in the "Bootstrap code for cell coordinates Fig4" Python file. 
+
+The function used to perform the bootstrap sampling is titled "Linear_regression_bootstrap_coordinates" which can be called using the following parameters: "axis1", "axis2", "axis", "nZones", and "nShuffles".
+
+These "axis1", "axis2", and "axis" correspond to the 2-dimensional axes along which the data will be displayed. Options for "axis1" and "axis2" include "x", "y", and "z". Options for "axis" include "xy", "xz", and "yz".
+
+
+"nZones" corresponds to how many samples should be selected during the bootstrapping process (e.g. if sampling for the "n4" four-zone cells, the function will randomly select 3 cells, or 26 cells for the "n1" one-zone cells). Options for "nZones" include "n0", "n1", "n2", "n3", and "n4". 
+
+"nShuffles" refers to how many times you wish to randomly sample x cells (related to "nZones" variable). We chose 50,000 iterations, but you can play with the number. 
+
+
+
+
+An example of how to call this function would go as follows:
+
+Linear_regression_bootstrap_coordinates("x","y","xy", "n4","50000")
+
+The function returns the number of randomly selected samples in which the Pearson's r2 value from the randomly selected datapoints is ≥ the r2 value of the line of best fit from the actual data for that group (e.g. the "n4" four-zone cells r2 = 0.997). 
+
+The function then returns the probability for how likely this is to occur given the number of nShuffles (e.g. number of samples in which the Pearson's r2 value from the randomly selected datapoints is ≥ the actual r2 value, divided by the value of nShuffles). 
+
+Lastly, the function returns a .csv file documenting the r2 value, slope, y-intercept, and P value of the linear regression for each sample in nShuffles. 
+
+Depending on the size of nShuffles, the run time may last several minutes. A smaller nShuffles value results in a faster computation and shorter run time. 
+
+
+
+Instructions: 
+1. Install Python 3 and necessary files to run a Jupyter notebook environment. 
+2. Download .csv file and the python file including the function necessary to replicate the analysis performed in Fig. 4.
+3. Install the packages and define the function listed in the accompanying Python file. 
+4. Specify the desired parameters, and then call the function in a subsequent line. 
+5. Evaluate output data in saved .csv file. 
