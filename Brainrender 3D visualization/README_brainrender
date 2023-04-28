@@ -5,7 +5,7 @@ Uses Python 3.7.8
 
 Individual Python files render the cells and CN differently, either showing each cell with a different color based on connectivity pattern, or showing cells in greyscale to representing ascending number of connected zones (lighter to darker).
 
-The .csv file ('CN_neuron_coordinates_20cellsdemo.csv') contains the necessary information to identify cells, their 3D coordinates, and their connectivity patterns.
+The .csv file ('CN_neuron_coordinates_20cellsdemo.csv') contains the necessary information to identify a subset of 20 cells, their 3D coordinates, and their connectivity patterns.
 
 This code is not fully compatible with Jupyter Notebook environments. We used Visual Studio Code to facilitate rendering. Using Visual Studio Code, the run time using macOS Monterey version 12.4 takes less than 30 seconds. 
 
