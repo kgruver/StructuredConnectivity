@@ -9,10 +9,11 @@ from scipy.spatial.distance import cdist
 from scipy.stats import percentileofscore
 
 
-def comparedistances(csv1,csv2):
+def comparedistances(csv1,csv2,sumofdistances):
     
     array1 = genfromtxt(csv1, delimiter=',', encoding='utf-8-sig')
     array2 = genfromtxt(csv2, delimiter=',', encoding='utf-8-sig')
+    sumofdistancesperanimal = genfromtxt(sumofdistances, delimiter=',', encoding='utf-8-sig')
 
     #Assessing nearest neighbors of puncta from channel 1 to channel 2
     kdtree1 = spatial.KDTree(array2)
@@ -38,18 +39,18 @@ def comparedistances(csv1,csv2):
     #Range starts at 0 microns and ends at 200 microns, but can be edited.
 
     for i in range(0,200):
-        percentile = percentileofscore(combined_distances_list, i)
+        percentile = percentileofscore(sumofdistancesperanimal, i)
         print(percentile)
         
     
-    ### This is only for one image in the stack. All the distances are concatenated in a separate spreadsheet and the percentiles are measured for each animal.
-    ### The percentiles are then averaged across all animals to get the final distribution. 
-
+### The above code generates percentiles of distances only across channels for one image in a stack. For data in figure, all the distances across stack positions were concatenated in a separate spreadsheet and the percentiles are measured for each animal.
+### The percentiles are then averaged across all animals to get the final distribution. 
 
 ### In a separate command line, call the following function and replace csv1 and csv2 with the file paths of the .csv files included in this folder.
-### For one slice, csv1 == channel 1 and csv2 == channel 2
+
 ### For example:
 csv1 = 'Animal_ID1_slice5_ch1_centroid_XYcoordinates_csv1.csv'
 csv2 = 'Animal_ID1_slice5_ch2_centroid_XYcoordinates_csv2.csv'
-comparedistances(csv1,csv2)
+sumofdistances = 'Distances_across_both_channels_Animal_ID6.csv'
+comparedistances(csv1,csv2,sumofdistances)
  
