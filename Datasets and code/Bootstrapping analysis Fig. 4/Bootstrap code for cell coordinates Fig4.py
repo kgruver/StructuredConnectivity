@@ -17,7 +17,7 @@ from scipy.stats import percentileofscore
 
 def Linear_regression_bootstrap_coordinates(axis1, axis2, axis, nZones, nShuffles):
     
-    file = '3d_coordinates_10cell_demo.csv'
+    file = '3d_coordinates_all75cells.csv'
 
     ###n4 = number of cells with n=4 zones
     n0 = 34
@@ -222,7 +222,7 @@ def Linear_regression_bootstrap_coordinates(axis1, axis2, axis, nZones, nShuffle
         print("Pvalue of r2 happening this many times: "+str(samplesof3_pvalue))
 
         print(samples_of_3_nShuffles_times_reshaped)
-        np.savetxt("stats_samples_of_3cells_n4_shuffled_n_times.csv",samples_of_3_nShuffles_times_reshaped,delimiter=",")
+        np.savetxt("stats_samples_of_3cells_n4_"+str(axis)+"_shuffled_"+str(nShuffles)+"_times.csv",samples_of_3_nShuffles_times_reshaped,delimiter=",")
 
         
     elif nZones == "n3":
@@ -365,7 +365,7 @@ def Linear_regression_bootstrap_coordinates(axis1, axis2, axis, nZones, nShuffle
         print("Pvalue of r2 happening this many times: "+str(samplesof6_pvalue))
 
         print(samples_of_6_nShuffles_times_reshaped)
-        np.savetxt("stats_samples_of_6cells_n3_shuffled_n_times.csv",samples_of_6_nShuffles_times_reshaped,delimiter=",")
+        np.savetxt("stats_samples_of_6cells_n3_"+str(axis)+"_shuffled_"+str(nShuffles)+"_times.csv",samples_of_6_nShuffles_times_reshaped,delimiter=",")
 
         
     elif nZones == "n2":
@@ -508,7 +508,7 @@ def Linear_regression_bootstrap_coordinates(axis1, axis2, axis, nZones, nShuffle
         print("Pvalue of r2 happening this many times: "+str(samplesof6_pvalue))
 
         print(samples_of_6_nShuffles_times_reshaped)
-        np.savetxt("stats_samples_of_6cells_n2_shuffled_n_times.csv",samples_of_6_nShuffles_times_reshaped,delimiter=",")
+        np.savetxt("stats_samples_of_6cells_n2_"+str(axis)+"_shuffled_"+str(nShuffles)+"_times.csv",samples_of_6_nShuffles_times_reshaped,delimiter=",")
 
     elif nZones == "n1":
         if axis == "xy":
@@ -649,7 +649,7 @@ def Linear_regression_bootstrap_coordinates(axis1, axis2, axis, nZones, nShuffle
         print("Pvalue of r2 happening this many times: "+str(samplesof26_pvalue))
 
         print(samples_of_26_nShuffles_times_reshaped)
-        np.savetxt("stats_samples_of_26cells_n1_shuffled_n_times.csv",samples_of_26_nShuffles_times_reshaped,delimiter=",")
+        np.savetxt("stats_samples_of_26cells_n1_"+str(axis)+"_shuffled_"+str(nShuffles)+"_times.csv",samples_of_26_nShuffles_times_reshaped,delimiter=",")
 
         
         
@@ -791,4 +791,26 @@ def Linear_regression_bootstrap_coordinates(axis1, axis2, axis, nZones, nShuffle
         print("Pvalue of r2 happening this many times: "+str(samplesof34_pvalue))
 
         print(samples_of_34_nShuffles_times_reshaped)
-        np.savetxt("stats_samples_of_34cells_n0_shuffled_n_times.csv",samples_of_34_nShuffles_times_reshaped,delimiter=",")
+        np.savetxt("stats_samples_of_34cells_n0_"+str(axis)+"_shuffled_"+str(nShuffles)+"_times.csv",samples_of_34_nShuffles_times_reshaped,delimiter=",")
+
+### Results for Fig. 4e-f
+### Uncomment to run the function for each nZones and orientation (e.g. xy == rostral-caudal and ventral-dorsal axes)
+
+#Linear_regression_bootstrap_coordinates("x","y","xy","n0", 50000)
+#Linear_regression_bootstrap_coordinates("x","y","xy","n1", 50000)
+#Linear_regression_bootstrap_coordinates("x","y","xy","n2", 50000)
+#Linear_regression_bootstrap_coordinates("x","y","xy","n3", 50000)
+#Linear_regression_bootstrap_coordinates("x","y","xy","n4", 50000)
+        
+
+
+### Results for Fig. 4g-h
+### Uncomment to run the function for each nZones and orientation (e.g. xy == medial-lateral and ventral-dorsal axes)
+
+#Linear_regression_bootstrap_coordinates("z","y","zy","n0", 50000)
+#Linear_regression_bootstrap_coordinates("z","y","zy","n1", 50000)
+#Linear_regression_bootstrap_coordinates("z","y","zy","n2", 50000)
+#Linear_regression_bootstrap_coordinates("z","y","zy","n3", 50000)
+#Linear_regression_bootstrap_coordinates("z","y","zy","n4", 50000)
+        
+
