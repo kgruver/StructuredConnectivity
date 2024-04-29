@@ -10,7 +10,7 @@ Columns (lobules) are clustered (col_cluster=True) while rows (cells) are not (r
 Run time in Jupyter notebook takes a few seconds. 
 
 Instructions: 
-1. Install Python 3 and necessary files to run a Jupyter notebook environment. 
+1. Install Python 3 and necessary files to run a Jupyter notebook or VSCode. 
 2. Download .csv file and the python file including the function necessary to replicate the analysis performed in Fig. 2.
 3. Install the packages and run the command in the accompanying Python file. 
 4. Outputs a clustergram through MatPlotLib. 
