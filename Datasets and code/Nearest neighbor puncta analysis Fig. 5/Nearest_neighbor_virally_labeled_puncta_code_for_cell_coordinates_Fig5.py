@@ -32,7 +32,7 @@ def comparedistances(csv1,csv2,sumofdistances):
     combined_distances = np.delete(combined_array, 1, 1)
     combined_distances_list = [item for sublist in combined_distances for item in sublist]
     
-    #N.B. You can print out the nearest neighbor distances across both channels by un-commenting the command below
+    #N.B. You can print out the nearest neighbor distances across both channels for one image in a stack by un-commenting the command below
     #print(combined_distances_list)
 
     #Calculating the percentile for number of puncta within X microns.
@@ -49,8 +49,8 @@ def comparedistances(csv1,csv2,sumofdistances):
 ### In a separate command line, call the following function and replace csv1 and csv2 with the file paths of the .csv files included in this folder.
 
 ### For example:
-csv1 = 'Animal_ID1_slice5_ch1_centroid_XYcoordinates_csv1.csv'
-csv2 = 'Animal_ID1_slice5_ch2_centroid_XYcoordinates_csv2.csv'
+csv1 = '/Animal_ID6/Animal_ID6_slice1_ch1_centroid_XYcoordinates_csv1.csv'
+csv2 = '/Animal_ID6/Animal_ID6_slice1_ch2_centroid_XYcoordinates_csv2.csv'
 sumofdistances = 'Distances_across_both_channels_Animal_ID6.csv'
 comparedistances(csv1,csv2,sumofdistances)
  
