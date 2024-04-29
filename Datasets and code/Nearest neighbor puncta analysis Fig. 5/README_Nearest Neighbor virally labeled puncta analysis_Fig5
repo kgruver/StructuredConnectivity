@@ -13,7 +13,7 @@ The code relies on SciPy's KD spatial tree functionality to identify k-dimension
 Run time in Jupyter notebook takes a few seconds. 
 
 Instructions: 
-1. Install Python 3 and necessary files to run a Jupyter notebook environment. 
-2. Download .csv files and the Python file including the function necessary to demo the analysis performed in Fig. 5.
-3. Install the packages and run the function 'comparedistances(csv1,csv2)' from the accompanying Python file, with parameters of csv1 and csv2 denoting the file path for the two .csv files included in this folder.
-4. Outputs the percentile for punch within X range (0 to 100 microns is default, but can be edited in the code). Uncommenting the "print" function shows the distances between puncta across channels, in addition to the percentiles.
+1. Install Python 3 and necessary files to run in a Jupyter notebook or in VSCode. 
+2. Download .csv files and the Python file needed to recreate analysis performed for Fig. 5.
+3. Install the packages and run the function 'comparedistances(csv1,csv2)' from the accompanying Python file, with parameters of csv1 and csv2 denoting the file path for each pair of two .csv files included in this folder (each Animal ID has multiple sections analyzed with a separate .csv for the two channels analyzed).
+4. Outputs the percentile for punch within X range (0 to 200 microns is default, but can be edited in the code). Uncommenting the "print" function shows the distances between puncta across channels, in addition to the percentiles.
