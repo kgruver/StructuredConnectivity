@@ -1,7 +1,6 @@
 import numpy as np
 import numpy.random as random
 from numpy import genfromtxt
-
 from scipy import stats
 from scipy import spatial
 from scipy.spatial import distance
@@ -12,8 +11,8 @@ from scipy.stats import percentileofscore
 
 def comparedistances(csv1,csv2):
     
-    array1 = genfromtxt(csv1, delimiter=',')
-    array2 = genfromtxt(csv2, delimiter=',')
+    array1 = genfromtxt(csv1, delimiter=',', encoding='utf-8-sig')
+    array2 = genfromtxt(csv2, delimiter=',', encoding='utf-8-sig')
 
     #Assessing nearest neighbors of puncta from channel 1 to channel 2
     kdtree1 = spatial.KDTree(array2)
@@ -30,23 +29,27 @@ def comparedistances(csv1,csv2):
     
     #Dropping ID of puncta
     combined_distances = np.delete(combined_array, 1, 1)
+    combined_distances_list = [item for sublist in combined_distances for item in sublist]
     
     #N.B. You can print out the nearest neighbor distances across both channels by un-commenting the command below
-    #print(combined_distances)
-    
+    #print(combined_distances_list)
+
     #Calculating the percentile for number of puncta within X microns.
-    #Range starts at 0 microns and ends at 100 microns, but can be edited.
-    
-    for i in range(0,100):
-        percentile = percentileofscore(combined_distances, i)
+    #Range starts at 0 microns and ends at 200 microns, but can be edited.
+
+    for i in range(0,200):
+        percentile = percentileofscore(combined_distances_list, i)
         print(percentile)
         
-
-### This is only for one image in the stack. All the distances are concatenated in a separate spreadsheet and the percentiles are measured for each animal.
-
+    
+    ### This is only for one image in the stack. All the distances are concatenated in a separate spreadsheet and the percentiles are measured for each animal.
+    ### The percentiles are then averaged across all animals to get the final distribution. 
 
 
 ### In a separate command line, call the following function and replace csv1 and csv2 with the file paths of the .csv files included in this folder.
-
-#comparedistances(csv1,csv2)
+### For one slice, csv1 == channel 1 and csv2 == channel 2
+### For example:
+csv1 = 'Animal_ID1_slice5_ch1_centroid_XYcoordinates_csv1.csv'
+csv2 = 'Animal_ID1_slice5_ch2_centroid_XYcoordinates_csv2.csv'
+comparedistances(csv1,csv2)
  
