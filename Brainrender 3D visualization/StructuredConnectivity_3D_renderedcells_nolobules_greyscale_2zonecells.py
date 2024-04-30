@@ -9,7 +9,7 @@ from brainrender import _utils
 #Find cell coordinates
 import csv as c
 
-file = open("CN_neuron_coordinates_20cellsdemo.csv")
+file = open("CN_neuron_coordinates_allcells.csv")
 csvreader = c.reader(file)
 
 # Skip first line to get to get to data
@@ -208,7 +208,7 @@ scene = b.Scene(title="", inset=False)
 # Adding cerebellum rendering region
 cerebellum = scene.add_brain_region("CB", alpha=0.00) #mesh type
 cn = scene.add_brain_region("CBN", alpha=0.00, color="grey")
-fn_rendered = scene.add_brain_region('FN', alpha=0.1, color="grey", silhouette=True)
+fn_rendered = scene.add_brain_region('FN', alpha=0.1, color="grey", silhouette=True) #FN occasionally difficult to visualize without silhouette
 
 # Adding the four zones
 zone1_lobs = add_lobules(scene, zone1, "navy")
