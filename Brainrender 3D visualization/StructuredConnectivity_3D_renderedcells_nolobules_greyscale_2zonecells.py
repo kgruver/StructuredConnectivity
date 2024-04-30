@@ -203,13 +203,12 @@ def add_lobules(scene, list_of_lobules, zone_color):
     return actors
 
 # Setting up scene
-#scene = b.Scene(title="3D Rendering of Cerebellar CN Neurons")
 scene = b.Scene(title="", inset=False)
 
 # Adding cerebellum rendering region
-cerebellum = scene.add_brain_region("CB", alpha=0.00) #mesh type , was rendered a=0.05
-cn = scene.add_brain_region("CBN", alpha=0.00, color="grey") #was rendered a=0.05
-fn_rendered = scene.add_brain_region('FN', alpha=0.05, color="grey") #was rendered a=0.1
+cerebellum = scene.add_brain_region("CB", alpha=0.00) #mesh type
+cn = scene.add_brain_region("CBN", alpha=0.00, color="grey")
+fn_rendered = scene.add_brain_region('FN', alpha=0.1, color="grey", silhouette=True)
 
 # Adding the four zones
 zone1_lobs = add_lobules(scene, zone1, "navy")
