@@ -284,7 +284,6 @@ def add_lobules(scene, list_of_lobules, zone_color):
     return actors
 
 # Setting up scene
-#scene = b.Scene(title="3D Rendering of Cerebellar CN Neurons")
 scene = b.Scene(title="", inset=False)
 
 # Adding cerebellum rendering region
