@@ -6,9 +6,9 @@ Centroid X-Y coordinates of virally-labeled Purkinje cell puncta were extracted 
 
 Distances were measured for each image in a stack and stacks were not compressed into a single image. Images in the stack that did not include many puncta (usually at the beginning and/or end of a stack of 10+ images acquired at 2 micron increments) were excluded, and images where both channels exhibited viral labeling were used for measurement.   
 
-An example set of coordinates for each channel for Animal_ID1 slice #5 (in a stack of 13 images where slices #5-13 were included for analysis) are included here as two .csv files for demonstrative purposes. For the complete dataset, nearest-neighbor distances were queried for each included slice for each animal and the distances for each channel and slice were concatenated to identify the percentiles of nearest-neighbor distances from 0 microns to X microns. 
+Nearest-neighbor distances were queried for each included slice for each animal and the distances for each channel and slice were concatenated to identify the percentiles of nearest-neighbor distances from 0 microns to X microns. 
 
-The code relies on SciPy's KD spatial tree functionality to identify k-dimensional points for a nearest-neighbor lookup, querying coordinates across .csv files. The code also outputs the percent of puncta located within X micron distance from a punctum in the opposite imaging channel. Here we have defaulted to printing the range from 0 microns to 100 microns. 
+The code relies on SciPy's KD spatial tree functionality to identify k-dimensional points for a nearest-neighbor lookup, querying coordinates across .csv files. The code also outputs the percent of puncta located within X micron distance from a punctum in the opposite imaging channel. Here we have defaulted to printing the range from 0 microns to 200 microns. 
 
 Run time in Jupyter notebook takes a few seconds. 
 
