@@ -1,7 +1,7 @@
 
 Analysis performed using Jupyter Notebook environment (version 6.4.5) in a Python 3 ipykernel. 
 
-Coordinates of 10 sample cells and their corresponding number of identified connected zones is available in the "3d_coordinates_10cell_demo" file. 
+Coordinates of all cells and their corresponding number of identified connected zones is available in the "3d_coordinates_all75 cells.csv" file. 
 
 Code for performing X number of bootstrap sampling repetitions is provided in the "Bootstrap code for cell coordinates Fig4" Python file. 
 
@@ -32,8 +32,8 @@ Depending on the size of nShuffles, the run time may last several minutes. A sma
 
 
 Instructions: 
-1. Install Python 3 and necessary files to run a Jupyter notebook environment. 
+1. Install Python 3 and necessary files to run a Jupyter notebook or VS Code.
 2. Download .csv file and the python file including the function necessary to replicate the analysis performed in Fig. 4.
 3. Install the packages and define the function listed in the accompanying Python file. 
-4. Specify the desired parameters, and then call the function in a subsequent line. 
+4. Select which analysis to run and uncomment the given line of code.
 5. Evaluate output data in saved .csv file. 
