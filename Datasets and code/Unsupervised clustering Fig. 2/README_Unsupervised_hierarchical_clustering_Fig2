@@ -1,7 +1,7 @@
 
 Analysis performed using Jupyter Notebook environment (version 6.4.5) in a Python 3 ipykernel. 
 
-Boolean connectivity patterns of 10 demo cells to lobules III through X, provided in .csv file. 
+Boolean connectivity patterns of the 41 cells that were identified to have a connection a lobule (e.g. lobules III through X) provided in .csv file. 
 
 Code for performing unsupervised hierarchical clustering using the Seaborn package and "clustergram" functionality. 
 
