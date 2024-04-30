@@ -1,7 +1,7 @@
 
 Analysis performed using Jupyter Notebook environment (version 6.4.5) in a Python 3 ipykernel. 
 
-Coordinates of 10 sample cells and their corresponding number of identified connected zones is available in the "3d_coordinates_10cell_demo" file. 
+Coordinates of all cells and their corresponding number of identified connected zones is available in the "3d_coordinates_all75 cells.csv" file. 
 
 Code for performing X number of bootstrap sampling repetitions is provided in the "Bootstrap code for cell coordinates Fig4" Python file. 
 
