@@ -1,7 +1,6 @@
 import random
 from tkinter import W
 import brainrender as b
-import imgkit
 import numpy as np
 from brainrender.actors import Point
 from brainrender import _utils
